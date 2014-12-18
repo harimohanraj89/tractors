@@ -1,6 +1,6 @@
 module.exports = function(app) {
   app.get('/tractors', function(req, res) {
-    res.send("Tractors index page");
+    res.render("tractors/index.jade");
   });
 
   app.get('/tractors/new', function(req, res) {
@@ -8,7 +8,7 @@ module.exports = function(app) {
   });
 
   app.get('/tractors/:id', function(req, res) {
-    res.send("Tractors show page: " + req.params.id);
+    res.render("tractors/show.jade", { id: req.params.id });
   });
 
   app.get('/tractors/:id/edit', function(req, res) {
