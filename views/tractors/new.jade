@@ -1,0 +1,9 @@
+extends ../layouts/application.jade
+block content
+  h1 New Tractor
+  form(action="/tractors", method="post")
+    input(type="text", name="model", placeholder="Model")
+    br
+    input(type="text", name="price", placeholder="Price")
+    br
+    button Make New Tractor
